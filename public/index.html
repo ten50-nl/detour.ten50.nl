@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detour: every link opens in the right browser and profile</title>
+  <meta name="description" content="Detour is a free and open source macOS app that opens every link in the right browser and browser profile, learns from your history and only asks when it can't tell.">
+  <meta name="theme-color" content="#F3F4FA" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#151937" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://detour.ten50.nl/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://detour.ten50.nl/">
+  <meta property="og:title" content="Detour: every link opens in the right browser and profile">
+  <meta property="og:description" content="Free and open source macOS app. Work links in your work profile, video in your ad-free browser. Learns from your history, asks only when unsure.">
+  <meta property="og:image" content="https://detour.ten50.nl/images/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/fonts/fonts.css">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top">
+    <a class="brand" href="/"><img src="/images/icon.png" alt="" width="32" height="32"> Detour</a>
+    <nav aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#install">Install</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://github.com/ten50nl/detour">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>Every link opens in the right browser and profile.</h1>
+        <p class="lede">Detour is a small Mac app that sits between your apps and your browsers. Work links go to your work profile, video goes to your ad-free browser, and it only asks when it really can't tell.</p>
+        <div class="cta">
+          <a class="button primary" href="https://github.com/ten50nl/detour/releases/latest/download/Detour.dmg">Download for macOS</a>
+          <span class="version" data-version>macOS 15 or later</span>
+        </div>
+        <div class="brew">
+          <code id="brew-cmd">brew install --cask ten50nl/tap/detour</code>
+          <button type="button" class="copy" data-copy="brew-cmd" aria-label="Copy Homebrew command">Copy</button>
+        </div>
+        <p class="free">Free and open source, forever. No account, no tracking.</p>
+      </div>
+
+      <figure class="routes" aria-label="Example: links being routed to work, personal and ad-free destinations">
+        <div class="map">
+        <svg viewBox="0 60 500 300" role="img" aria-hidden="true">
+          <defs>
+            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+          </defs>
+          <path class="track" id="p-work" d="M 70 330 L 210 330 C 300 330 300 90 400 90 L 430 90"/>
+          <path class="track" id="p-personal" d="M 70 330 L 210 330 C 300 330 300 210 400 210 L 430 210"/>
+          <path class="track" id="p-ads" d="M 70 330 L 430 330"/>
+          <circle class="origin" cx="70" cy="330" r="13"/>
+          <g class="stop" data-stop="work" transform="translate(430 90)">
+            <circle class="stop-halo" r="26"/>
+            <circle class="stop-dot blue" r="15"/>
+          </g>
+          <g class="stop" data-stop="personal" transform="translate(430 210)">
+            <circle class="stop-halo" r="26"/>
+            <circle class="stop-dot green" r="15"/>
+          </g>
+          <g class="stop" data-stop="ads" transform="translate(430 330)">
+            <circle class="stop-halo" r="26"/>
+            <circle class="stop-dot orange" r="15"/>
+          </g>
+          <circle class="runner" r="7" cx="70" cy="330"/>
+        </svg>
+        <div class="stop-label at-work"><strong>Work</strong><span>Chrome, work profile</span></div>
+        <div class="stop-label at-personal"><strong>Personal</strong><span>Chrome, personal profile</span></div>
+        <div class="stop-label at-ads"><strong>Ad-free</strong><span>Firefox</span></div>
+        </div>
+        <figcaption>
+          <span class="link-chip" data-link>jira.acme.com/browse/OPS-12</span>
+          <span class="reason" data-reason>matches your rule for acme.com</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="why">
+      <p>Browser pickers ask you every time you click. Detour decides for you, and tells you why.</p>
+    </section>
+
+    <section id="how" class="how">
+      <h2>How Detour decides</h2>
+      <p class="section-lede">For every link it walks through these checks and stops at the first clear answer.</p>
+      <ol class="steps">
+        <li><h3>Your rules</h3><p>Sites you always want in one place, like your company's tools in the work profile or YouTube in Firefox.</p></li>
+        <li><h3>Google links</h3><p>Calendar invites carry the owner's email, and Docs you opened before are remembered per profile. Your work invite opens where your work account lives.</p></li>
+        <li><h3>Choices you taught it</h3><p>Moved a link to another profile from the menu bar? Detour remembers that site.</p></li>
+        <li><h3>Your history</h3><p>If you open a site in one profile nine times out of ten, that's where it goes. No rule needed.</p></li>
+        <li><h3>Where you clicked</h3><p>A link from Slack can lean towards work, one from WhatsApp towards personal.</p></li>
+        <li><h3>Ask</h3><p>Still not sure, like a Google Doc nobody opened before? A small picker appears at your cursor. Press 1, 2 or 3.</p></li>
+      </ol>
+      <p class="tip">Hold <kbd>⌥</kbd> while clicking any link to choose the destination yourself.</p>
+    </section>
+
+    <section class="setup">
+      <div class="setup-copy">
+        <h2>Set up in two minutes</h2>
+        <p>Detour finds your browsers and profiles by itself, including Chrome, Brave, Edge and Vivaldi profiles. Name them, pick a default, and it suggests rules from your own history: the sites you already open in the same place every time.</p>
+        <ul class="checks">
+          <li>Works with Chrome, Brave, Edge, Vivaldi and Chromium profiles</li>
+          <li>Firefox, Safari, Arc and others as a whole browser</li>
+          <li>Up to nine destinations</li>
+          <li>Recent links in the menu bar, with "Open in…" to correct and teach</li>
+        </ul>
+      </div>
+      <img class="shot" src="/images/onboarding-destinations.png" width="1360" height="1176" alt="Detour setup: choosing browsers and profiles" loading="lazy">
+    </section>
+
+    <section class="privacy">
+      <h2>Your links stay yours</h2>
+      <div class="privacy-grid">
+        <p><strong>No network.</strong> Detour opens links. It makes no requests of its own, so there is nothing to track.</p>
+        <p><strong>Local history summary.</strong> To learn, it counts per site how often you visited it in each profile. Full URLs and page titles are not stored.</p>
+        <p><strong>No account.</strong> Settings are a plain file on your Mac you can read and edit.</p>
+        <p><strong>Open source.</strong> MIT licensed, so you can read every line of what it does.</p>
+      </div>
+    </section>
+
+    <section id="install" class="install">
+      <h2>Install</h2>
+      <div class="install-options">
+        <div>
+          <h3>Download</h3>
+          <p>Open <a href="https://github.com/ten50nl/detour/releases/latest/download/Detour.dmg">Detour.dmg</a> and drag Detour to Applications. It's signed and notarized by Apple.</p>
+        </div>
+        <div>
+          <h3>Homebrew</h3>
+          <p><code>brew install --cask ten50nl/tap/detour</code></p>
+          <p>Updates come with <code>brew upgrade</code>.</p>
+        </div>
+        <div>
+          <h3>From source</h3>
+          <p><code>git clone https://github.com/ten50nl/detour</code> and run <code>scripts/build-app.sh --install</code>. Needs Xcode 16.</p>
+        </div>
+      </div>
+      <p class="requirements">Requires macOS 15 Sequoia or later, on Apple silicon or Intel.</p>
+    </section>
+
+    <section id="faq" class="faq">
+      <h2>Questions</h2>
+      <details>
+        <summary>Is it really free?</summary>
+        <p>Yes. Detour is MIT licensed, with no paid version, no account and no tracking, and it will stay that way. <a href="https://ten50.nl">ten50</a> builds it because we use it every day.</p>
+      </details>
+      <details>
+        <summary>Why does it need Full Disk Access?</summary>
+        <p>macOS keeps browser profiles and history behind that permission. Detour reads them on your Mac to show your profiles and to learn where you open each site. You can skip it; Detour then routes to whole browsers only.</p>
+      </details>
+      <details>
+        <summary>Can it open a specific Firefox or Safari profile?</summary>
+        <p>Not yet. Firefox can't reliably open a link in another profile while it's running, and Safari profiles can't be reached from outside. Both work as a whole browser.</p>
+      </details>
+      <details>
+        <summary>Does it replace my browser?</summary>
+        <p>No. macOS sees Detour as your default browser, but it only passes each link on to one of your real browsers. Nothing about them changes.</p>
+      </details>
+      <details>
+        <summary>How do I undo it?</summary>
+        <p>Choose another default browser in System Settings, quit Detour from the menu bar and delete it. Your settings live in <code>~/Library/Application Support/Detour</code> if you want to remove those too.</p>
+      </details>
+      <details>
+        <summary>Where do I report a bug?</summary>
+        <p>On <a href="https://github.com/ten50nl/detour/issues">GitHub</a>. Pull requests are welcome too.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="bottom">
+    <img src="/images/icon.png" alt="" width="40" height="40">
+    <p>Detour is free and open source software by <a href="https://ten50.nl">ten50</a>.</p>
+    <nav aria-label="Footer">
+      <a href="https://github.com/ten50nl/detour">Source</a>
+      <a href="https://github.com/ten50nl/detour/releases">Releases</a>
+      <a href="https://github.com/ten50nl/detour/blob/main/docs/rules.md">Rules reference</a>
+      <a href="https://github.com/ten50nl/detour/blob/main/LICENSE">MIT license</a>
+    </nav>
+  </footer>
+</body>
+</html>

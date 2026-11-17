@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://detour.ten50.nl/sitemap.xml
