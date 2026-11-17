@@ -272,6 +272,13 @@ td.part { color: var(--ink-soft); }
 .install-options code { overflow-wrap: anywhere; color: var(--ink); }
 
 .faq { max-width: 44rem; }
+.legal { padding-top: 40px; }
+.legal section { max-width: 44rem; }
+.legal h1 { font-size: clamp(2rem, 4vw, 2.75rem); }
+.legal h2 { font-size: 1.5rem; margin-top: 44px; }
+.legal h3 { margin-top: 22px; }
+.legal p { color: var(--ink-soft); }
+.legal .meta { margin-top: 8px; }
 .faq h2 { margin-bottom: 18px; }
 details { border-bottom: 1px solid var(--line); padding: 18px 0; }
 summary { cursor: pointer; font-weight: 600; font-size: 1.05rem; list-style: none; display: flex; justify-content: space-between; gap: 16px; }

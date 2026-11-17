@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy policy | Detour</title>
+  <meta name="description" content="Privacy policy for Detour, the free and open source Mac app by ten50, and for detour.ten50.nl.">
+  <link rel="canonical" href="https://detour.ten50.nl/privacy">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="/" aria-label="Detour home"><img src="/images/icon.png" alt="" width="28" height="28"> Detour</a>
+    <nav aria-label="Main">
+      <a href="/#how">How it works</a>
+      <a href="/#faq">FAQ</a>
+      <a href="https://github.com/ten50-nl/detour">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="main" class="legal">
+    <section>
+      <h1>Privacy policy</h1>
+      <p class="meta">Last updated 17 November 2026</p>
+
+      <p>Detour is a free and open source Mac app made by ten50 (Vinkenhof 4, 6181 KL Elsloo, the Netherlands, <a href="mailto:hallo@ten50.nl">hallo@ten50.nl</a>). This page explains what the app and this website do with your data. Short version: Detour keeps everything on your Mac, and we don't collect anything about you.</p>
+
+      <h2>The Detour app</h2>
+      <h3>What it reads</h3>
+      <p>To decide where a link opens, Detour looks at the link itself and at the app you clicked it in. If you give it Full Disk Access, it also reads the profile list and browsing history of your browsers (Chrome-family browsers, Firefox and Safari) from the last 90 days. If you allow Accessibility, it can read the title of the window you clicked in.</p>
+      <h3>What it stores</h3>
+      <p>Detour stores its settings and a summary in <code>~/Library/Application Support/Detour</code> on your Mac: your rules, choices you taught it, per site how often you visited it in each browser profile, Google file IDs you opened before, and a log of recent decisions (site, app, destination and reason, kept for 90 days). It does not store full web addresses of your history or page titles.</p>
+      <h3>What it sends</h3>
+      <p>Nothing, unless you turn on the automatic update check. That check is off by default. When it's on, Detour asks GitHub once a day for the latest release of Detour. The request contains the app's version number and, like any internet request, your IP address. GitHub handles that request under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a>. Detour doesn't use analytics, crash reporting, accounts or advertising.</p>
+      <h3>Removing your data</h3>
+      <p>Quit Detour and delete <code>~/Library/Application Support/Detour</code> and <code>~/Library/Caches/Detour</code>. Nothing else exists anywhere, so there is nothing to request from us.</p>
+
+      <h2>This website</h2>
+      <p>detour.ten50.nl has no cookies, analytics or trackers, and loads nothing from other sites except a version check: your browser asks GitHub for the latest Detour release so the page can show the version number. Our web server, hosted in Germany, keeps standard access logs (IP address, time, requested page and browser) for security and troubleshooting, and deletes them automatically after about 8 weeks. The site is served through Cloudflare, which processes requests to deliver and protect the site.</p>
+      <p>Downloads come straight from GitHub Releases, so GitHub's privacy statement applies to them.</p>
+
+      <h2>Your rights</h2>
+      <p>Under the GDPR you can ask what we know about you, and ask us to correct or delete it. For the app the answer is: nothing, because it stays on your Mac. For the website server logs, mail <a href="mailto:hallo@ten50.nl">hallo@ten50.nl</a>. You can also file a complaint with the Dutch Data Protection Authority (Autoriteit Persoonsgegevens).</p>
+
+      <h2>Changes</h2>
+      <p>If this policy changes, we update this page and the date above. The source of the app is public on <a href="https://github.com/ten50-nl/detour">GitHub</a>, so you can always check what it does.</p>
+    </section>
+  </main>
+
+  <footer class="bottom">
+    <p><img src="/images/icon.png" alt="" width="22" height="22"> Detour is free and open source software by <a href="https://ten50.nl">ten50</a>.</p>
+    <nav aria-label="Footer">
+      <a href="/">Home</a>
+      <a href="https://github.com/ten50-nl/detour">Source</a>
+      <a href="https://github.com/ten50-nl/detour/blob/main/LICENSE">MIT license</a>
+    </nav>
+  </footer>
+</body>
+</html>
