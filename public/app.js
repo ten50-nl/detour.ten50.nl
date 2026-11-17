@@ -80,7 +80,7 @@
     fetch("https://api.github.com/repos/ten50nl/detour/releases/latest")
       .then((r) => (r.ok ? r.json() : null))
       .then((release) => {
-        if (release && release.tag_name) version.textContent = `Version ${release.tag_name.replace(/^v/, "")}, macOS 15 or later`;
+        if (release && release.tag_name) version.textContent = `Version ${release.tag_name.replace(/^v/, "")}. Free and open source. macOS 15 or later, Apple silicon and Intel.`;
       })
       .catch(() => {});
   }
