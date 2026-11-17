@@ -3,7 +3,7 @@
     { link: "jira.acme.com/browse/OPS-12", to: "work", reason: "matches your rule for acme.com" },
     { link: "youtube.com/watch?v=dQw4w9WgXcQ", to: "ads", reason: "matches your rule for youtube.com" },
     { link: "calendar.google.com/event?eid=…", to: "work", reason: "invite for you@acme.com" },
-    { link: "github.com/ten50nl/detour", to: "personal", reason: "94% of your visits were in this profile" },
+    { link: "github.com/ten50-nl/detour", to: "personal", reason: "94% of your visits were in this profile" },
     { link: "docs.google.com/document/d/1Bx…", to: "personal", reason: "you opened this doc here before" },
     { link: "twitch.tv/directory", to: "ads", reason: "you moved twitch.tv here once, so it remembers" },
   ];
@@ -77,7 +77,7 @@
 
   const version = document.querySelector("[data-version]");
   if (version) {
-    fetch("https://api.github.com/repos/ten50nl/detour/releases/latest")
+    fetch("https://api.github.com/repos/ten50-nl/detour/releases/latest")
       .then((r) => (r.ok ? r.json() : null))
       .then((release) => {
         if (release && release.tag_name) version.textContent = `Version ${release.tag_name.replace(/^v/, "")}. Free and open source. macOS 15 or later, Apple silicon and Intel.`;
