@@ -1,9 +1,9 @@
 :root {
-  --paper: #F3F4FA;
-  --paper-2: #E7E9F4;
-  --ink: #1B1F45;
-  --ink-soft: #4A4F78;
-  --line: #C7CAE0;
+  --paper: #F5F5F7;
+  --paper-2: #E8E8ED;
+  --ink: #1D1D1F;
+  --ink-soft: #6E6E73;
+  --line: #D2D2D7;
   --blue: #4F8BFF;
   --green: #2FB457;
   --orange: #FF8A2A;
@@ -16,11 +16,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #151937;
-    --paper-2: #1E2350;
-    --ink: #ECEEFA;
-    --ink-soft: #A9AED3;
-    --line: #353B6E;
+    --paper: #161617;
+    --paper-2: #232325;
+    --ink: #F5F5F7;
+    --ink-soft: #A1A1A6;
+    --line: #3A3A3C;
     --green: #3DD06A;
   }
 }
@@ -242,7 +242,7 @@ h3 { font-weight: 800; font-size: 1.2rem; line-height: 1.2; }
   width: 100%;
   height: auto;
   border-radius: 14px;
-  box-shadow: 0 30px 60px -30px rgba(27, 31, 69, 0.55);
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.45);
 }
 
 .privacy-grid {
