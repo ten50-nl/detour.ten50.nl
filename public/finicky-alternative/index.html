@@ -39,7 +39,8 @@
             <tr><th scope="row">Suggests rules at setup</th><td class="us yes">Yes</td><td class="no">No</td></tr>
             <tr><th scope="row">Asks when unsure</th><td class="us yes">Picker</td><td class="no">No, pairs with Browserosaurus</td></tr>
             <tr><th scope="row">Removes tracking parameters</th><td class="us yes">Yes</td><td class="yes">In code</td></tr>
-            <tr><th scope="row">Rewrites links (x.com to xcancel, force https)</th><td class="us no">No</td><td class="yes">Yes</td></tr>
+            <tr><th scope="row">Rewrites links (x.com to xcancel.com)</th><td class="us yes">Yes</td><td class="yes">Yes</td></tr>
+            <tr><th scope="row">Settings in a file for your dotfiles</th><td class="us yes">JSON, export and import</td><td class="yes">JavaScript</td></tr>
             <tr><th scope="row">Custom logic (time of day, modifier keys)</th><td class="us part">Hold ⌥ to pick</td><td class="yes">Anything in code</td></tr>
             <tr><th scope="row">Handles links clicked inside a browser</th><td class="us no">Not yet</td><td class="yes">With its extension</td></tr>
             <tr><th scope="row">Shows why a link went where</th><td class="us yes">Yes</td><td class="part">In its log</td></tr>
@@ -49,13 +50,13 @@
       <p class="footnote">Based on Finicky's README and v4 configuration docs, November 2026. Something out of date? <a href="https://github.com/ten50-nl/detour/issues">Tell us on GitHub</a>.</p>
 
       <h2>Where Finicky is better</h2>
-      <p>If you like writing rules, Finicky is hard to beat. A rule can be any function, so you can rewrite links before they open, match on the time of day or a held key, and keep the whole setup in your dotfiles. Its Chrome and Firefox extensions also catch links you click inside a browser, which Detour can't do yet.</p>
+      <p>If you like writing rules, Finicky is hard to beat. A rule can be any function, so you can match on the time of day, a held key or anything else you can write in JavaScript. Its Chrome and Firefox extensions also catch links you click inside a browser, which Detour can't do yet.</p>
 
       <h2>Where Detour is better</h2>
       <p>Finicky only knows what you tell it. Detour also looks at where you opened each site before, per profile, per app you clicked in and per workspace (github.com/your-company versus github.com/you). Most links need no rule at all, and when Detour really isn't sure it shows a picker instead of guessing. Settings show you why each link went where it did.</p>
 
       <h2>Switching from Finicky</h2>
-      <p>Install Detour, run the two-minute setup and make it your default browser. Setup finds your browsers and profiles and suggests rules from your history, so you don't have to port your config. Your <code>~/.finicky.js</code> stays where it is, and to go back you pick Finicky as your default browser again.</p>
+      <p>Install Detour, run the two-minute setup and make it your default browser. Setup finds your browsers and profiles and suggests rules from your history, so you don't have to port your config. Detour can also swap sites before they open, like your Finicky rewrites, and keeps its own settings in one JSON file you can put in your dotfiles. Your <code>~/.finicky.js</code> stays where it is, and to go back you pick Finicky as your default browser again.</p>
       <p><a class="button primary" href="https://github.com/ten50-nl/detour/releases/latest/download/Detour.dmg">Download Detour for Mac</a></p>
     </section>
   </main>
