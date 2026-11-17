@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Finicky alternative without code: Detour</title>
+  <meta name="description" content="Like Finicky but without writing JavaScript? Detour is a free, open source Mac browser picker that learns from your browsing history which browser and profile each link belongs in.">
+  <link rel="canonical" href="https://detour.ten50.nl/finicky-alternative/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="/" aria-label="Detour home"><img src="/images/icon.png" alt="" width="28" height="28"> Detour</a>
+    <nav aria-label="Main">
+      <a href="/#how">How it works</a>
+      <a href="/#faq">FAQ</a>
+      <a href="https://github.com/ten50-nl/detour">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="main" class="legal">
+    <section>
+      <h1>Finicky without the config file</h1>
+      <p class="meta">Updated 17 November 2026</p>
+      <p>Finicky by John Sterling is a great open source browser router. You describe every rule in a JavaScript or TypeScript file, so it can do almost anything. Detour takes the opposite route: it learns where your links belong from your own browsing history and you set it up with clicks. Both are free and MIT licensed.</p>
+
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Detour compared to Finicky">
+        <table>
+          <thead><tr><th scope="col"><span class="visually-hidden">Feature</span></th><th scope="col" class="us">Detour</th><th scope="col">Finicky</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Price</th><td class="us">Free</td><td>Free</td></tr>
+            <tr><th scope="row">Open source</th><td class="us yes">MIT</td><td class="yes">MIT</td></tr>
+            <tr><th scope="row">Set up</th><td class="us yes">With clicks</td><td class="part">JavaScript file</td></tr>
+            <tr><th scope="row">Chrome, Brave and Edge profiles</th><td class="us yes">Yes</td><td class="yes">Yes</td></tr>
+            <tr><th scope="row">Rules by site and by app</th><td class="us yes">Yes</td><td class="yes">In code</td></tr>
+            <tr><th scope="row">Learns from your browsing history</th><td class="us yes">Yes</td><td class="no">No</td></tr>
+            <tr><th scope="row">Learns per app and per workspace</th><td class="us yes">Yes</td><td class="no">No</td></tr>
+            <tr><th scope="row">Suggests rules at setup</th><td class="us yes">Yes</td><td class="no">No</td></tr>
+            <tr><th scope="row">Asks when unsure</th><td class="us yes">Picker</td><td class="no">No, pairs with Browserosaurus</td></tr>
+            <tr><th scope="row">Removes tracking parameters</th><td class="us yes">Yes</td><td class="yes">In code</td></tr>
+            <tr><th scope="row">Rewrites links (x.com to xcancel, force https)</th><td class="us no">No</td><td class="yes">Yes</td></tr>
+            <tr><th scope="row">Custom logic (time of day, modifier keys)</th><td class="us part">Hold ⌥ to pick</td><td class="yes">Anything in code</td></tr>
+            <tr><th scope="row">Handles links clicked inside a browser</th><td class="us no">Not yet</td><td class="yes">With its extension</td></tr>
+            <tr><th scope="row">Shows why a link went where</th><td class="us yes">Yes</td><td class="part">In its log</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="footnote">Based on Finicky's README and v4 configuration docs, November 2026. Something out of date? <a href="https://github.com/ten50-nl/detour/issues">Tell us on GitHub</a>.</p>
+
+      <h2>Where Finicky is better</h2>
+      <p>If you like writing rules, Finicky is hard to beat. A rule can be any function, so you can rewrite links before they open, match on the time of day or a held key, and keep the whole setup in your dotfiles. Its Chrome and Firefox extensions also catch links you click inside a browser, which Detour can't do yet.</p>
+
+      <h2>Where Detour is better</h2>
+      <p>Finicky only knows what you tell it. Detour also looks at where you opened each site before, per profile, per app you clicked in and per workspace (github.com/your-company versus github.com/you). Most links need no rule at all, and when Detour really isn't sure it shows a picker instead of guessing. Settings show you why each link went where it did.</p>
+
+      <h2>Switching from Finicky</h2>
+      <p>Install Detour, run the two-minute setup and make it your default browser. Setup finds your browsers and profiles and suggests rules from your history, so you don't have to port your config. Your <code>~/.finicky.js</code> stays where it is, and to go back you pick Finicky as your default browser again.</p>
+      <p><a class="button primary" href="https://github.com/ten50-nl/detour/releases/latest/download/Detour.dmg">Download Detour for Mac</a></p>
+    </section>
+  </main>
+
+  <footer class="bottom">
+    <p><img src="/images/icon.png" alt="" width="22" height="22"> Detour is free and open source software by <a href="https://ten50.nl">ten50</a>.</p>
+    <nav aria-label="Footer">
+      <a href="/">Home</a>
+      <a href="https://github.com/ten50-nl/detour">Source</a>
+      <a href="https://github.com/ten50-nl/detour/blob/main/LICENSE">MIT license</a>
+    </nav>
+  </footer>
+</body>
+</html>
