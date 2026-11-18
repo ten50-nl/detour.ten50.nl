@@ -47,6 +47,7 @@
     "@type": "FAQPage",
     "mainEntity": [
       { "@type": "Question", "name": "How do I open links in a specific Chrome profile on Mac?", "acceptedAnswer": { "@type": "Answer", "text": "Install Detour and make it your default browser. It sends each link to the Chrome, Brave, Edge or Vivaldi profile you choose, based on your rules and where you opened that site before." } },
+      { "@type": "Question", "name": "Does Detour work with AI agents like Claude in Chrome?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Links an agent opens through macOS go through Detour, and a detour command and MCP server tell agents which browser and profile a link belongs to." } },
       { "@type": "Question", "name": "Is Detour really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Detour is MIT licensed open source software with no paid version, account or tracking." } },
       { "@type": "Question", "name": "Why does Detour need Full Disk Access?", "acceptedAnswer": { "@type": "Answer", "text": "macOS keeps browser profiles and history behind that permission. Detour reads them on your Mac to show your profiles and to learn where you open each site. Nothing leaves your Mac." } },
       { "@type": "Question", "name": "Can Detour open a specific Firefox or Safari profile?", "acceptedAnswer": { "@type": "Answer", "text": "Not yet. Firefox and Safari work as a whole browser. Chrome, Brave, Edge, Vivaldi and Chromium profiles are fully supported." } },
@@ -229,6 +230,10 @@
       <details>
         <summary>Can it open a specific Firefox or Safari profile?</summary>
         <p>Not yet. Firefox can't reliably open a link in another profile while it's running, and Safari profiles can't be reached from outside. Both work as a whole browser.</p>
+      </details>
+      <details>
+        <summary>Does it work with AI agents like Claude in Chrome?</summary>
+        <p>Yes. Links an agent opens through macOS already go through Detour. For agents that drive a browser directly, Detour has a <code>detour</code> command and an MCP server that tell the agent which browser and profile a link belongs to. <a href="https://github.com/ten50-nl/detour/blob/main/docs/agents.md">Set it up in one command</a>.</p>
       </details>
       <details>
         <summary>Does it replace my browser?</summary>
